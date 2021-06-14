@@ -14,25 +14,47 @@ document.addEventListener('DOMContentLoaded', function (){
 
     // THE FIRST STEP:
     //Creo un alert che contiene 5 numeri che deve apparire sulla pagina per 30 secondi; 
-    //alert('34, 44, 5, 103, 34');
-    //var alert = document.getElementById('text-to-disappear');
-    
-    //var al = window.open ('34, 44, 5, 103, 34');
+     var min=1;
+     var max=100;
+     var arrayAlert =[];
+
+     function getRandomNum (min, max){
+         return Math.floor(Math.random()*(max-min+1)+max);
+     }
+     
+
+     while (  arrayAlert.length < 5) {
+          var randomNum = getRandomNum(min, max);
+        if (!arrayAlert.includes(randomNum)){
+            arrayAlert.push(randomNum)
+        }
+     }
+
+     alert ('Ricordati questi numeri' + ' ' + arrayAlert+'!')
+
+
+
     setTimeout (function(){
-       alert ('34, 44, 5, 103, 39');
+
+     //THE THIRD STEP:
+     //In seguito, creo for oppure while (var i =0; i<=5; i++)
+     var arrayUser=[]; 
+     while ( arrayUser.length < 5){
+
+       var askUser= parseInt (prompt ('Inserisci i numeri che hai visto precedentemente'));
+       //    return askUser;
+     }
+
       },  5000);
 
 
-    //THE SECOND STEP:
-    //In seguito, creo for oppure while (var i =0; i<=5; i++)
-    //con parseInt (prompt ('Inserisci i numeri che hai visto precedentemente'));
+
       
-    for ( var i=0; i < 5; i++){
-        var askUser = parseInt(prompt('Inserisci un numero che hai visto precedentemente'));
-       //THE THIRD STEP: PROBLEMA 1.
-       //Come individuare quanti e quali dei numeri sono stati individuati???
-      // if (askUser === )
-    }
+   
+    //    //THE FOURTH STEP: PROBLEMA 1.
+    //    //Come individuare quanti e quali dei numeri sono stati individuati???
+      
+    // }
     
     
 
