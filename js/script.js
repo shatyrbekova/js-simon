@@ -39,12 +39,15 @@ document.addEventListener('DOMContentLoaded', function (){
      //THE THIRD STEP:
      //In seguito, creo for oppure while (var i =0; i<=5; i++)
      var arrayUser=[]; 
-     while ( arrayUser.length < 5){
+        while ( arrayUser.length < 5){
+         var askUser= parseInt (prompt ('Inserisci i numeri che hai visto precedentemente'));
 
-       var askUser= parseInt (prompt ('Inserisci i numeri che hai visto precedentemente'));
-       //    return askUser;
-     }
+        if(!arrayUser.includes(askUser)){
+           arrayAlert.push(askUser)
+        }
+      }
 
+      
       },  5000);
 
 
