@@ -14,17 +14,15 @@ document.addEventListener('DOMContentLoaded', function (){
 
     // THE FIRST STEP:
     //Creo un alert che contiene 5 numeri che deve apparire sulla pagina per 30 secondi; 
-     var min=1;
-     var max=100;
-     var arrayAlert =[];
 
-     function getRandomNum (min, max){
-         return Math.floor(Math.random()*(max-min+1)+max);
-     }
+     var arrayAlert =[];
+     var rightNum=[];
+
+   
      
 
      while (  arrayAlert.length < 5) {
-          var randomNum = getRandomNum(min, max);
+          var randomNum = Math.floor(Math.random () * 100);
         if (!arrayAlert.includes(randomNum)){
             arrayAlert.push(randomNum)
         }
@@ -42,22 +40,19 @@ document.addEventListener('DOMContentLoaded', function (){
         while ( arrayUser.length < 5){
          var askUser= parseInt (prompt ('Inserisci i numeri che hai visto precedentemente'));
 
-        if(!arrayUser.includes(askUser)){
+   
            arrayAlert.push(askUser)
-        }
+
+           if (randomNum.includes(askUser)){
+               rightNum.push(askUser);
+           }
+           document.getElementById('text-to-disappear') = 'Hai indovinato' + rightNum.length + 'Numero, ecco queli' +rightNum;
       }
 
-      
+     
       },  5000);
 
 
-
-      
-   
-    //    //THE FOURTH STEP: PROBLEMA 1.
-    //    //Come individuare quanti e quali dei numeri sono stati individuati???
-      
-    // }
     
     
 
